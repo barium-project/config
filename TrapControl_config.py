@@ -8,6 +8,7 @@ class TrapControl_config(object):
     {Parameter: (Rod1, Rod2, Rod3, Rod4))}
     {endCaps: (endCap 1, endCap 2)
     {einzel lens: (lens 1, lens 2)
+    {Ablation loading delay:(time(usec))
     '''
     params = {'Frequency' :(1.099e6, 1.099e6, 1.099e6, 1.099e6),
             'Phase' :(15,170,0,38),
@@ -16,6 +17,7 @@ class TrapControl_config(object):
             'HV':(0,0,1400,1400),
             'endCap':(5,5),
             'eLens':(0,0),
+            'Loading Time':(50)
             }
     '''
     IP address of the computer running the server
