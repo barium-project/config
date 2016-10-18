@@ -13,8 +13,8 @@ class TrapControl_config(object):
     params = {'Frequency' :(1.099e6, 1.099e6, 1.099e6, 1.099e6),
             'Phase' :(15,170,0,38),
             'Voltage':(186, 1233, 200, 1233),
-            'DC':(0,0,0,0),
-            'HV':(0,0,1400,1400),
+            'DC':(0,.1,0,.5),
+            'HV':(900,850,1400,1400),
             'endCap':(5,5),
             'eLens':(0,0),
             'Loading Time':(50)
