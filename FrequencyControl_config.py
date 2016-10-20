@@ -12,4 +12,11 @@ class FrequencyControl_config(object):
     gpibB = ['GPIB0::6','GPIB0::7','GPIB0::8']
 
 
+    '''
+    Set the default frequencies and powers for the oscillotors
+    '''
+    default = {'GPIB0::19':[2000,-100,-10], 'GPIB0::21':[2000,-100,-10], 'GPIB0::6':[100,-140], 'GPIB0::7':[100,-140],'GPIB0::8':[100,-140]}
 
+    cool_133 =  {'GPIB0::19':[2000,-100,-10], 'GPIB0::21':[2000,-100,-10], 'GPIB0::6':[100,-140], 'GPIB0::7':[100,-140],'GPIB0::8':[100,-140]}
+
+    heat_135 = {'GPIB0::19':[2000,-100,-10], 'GPIB0::21':[2000,-100,-10], 'GPIB0::6':[100,-140], 'GPIB0::7':[100,-140],'GPIB0::8':[100,-140]}
