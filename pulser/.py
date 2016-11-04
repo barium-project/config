@@ -60,17 +60,17 @@ class hardwareConfiguration(object):
     channelDict = {
            # Internal866 is in pulser firmware, this is the required channel name.
                    'Internal866':channelConfiguration(0, False, False, False, False), ## camera
-                   '866DP':channelConfiguration(1, False, False, True, False), 
-                   'TTL2':channelConfiguration(2, False, False, False, False), # manual compatible
-                   'TTL3':channelConfiguration(3, False, False, True, True), # manual compatible
-                   'TTL4':channelConfiguration(4, False, False, False, False), # manual compatible
-                   'TTL5':channelConfiguration(5, False, True, False, False), # manual compatible
-                   'TTL6':channelConfiguration(6, False, False, False, False), # manual compatible
-                   'TTL7':channelConfiguration(7, False, False, False, False), # manual compatible
-                   'TTL8':channelConfiguration(8, False, False, False, False), # manual compatible
-                   'TTL9':channelConfiguration(9, False, False, False, False), # manual compatible
-                   'TTL10':channelConfiguration(10, False, False, False, False), # manual compatible
-                   'TTL11':channelConfiguration(11, False, False, False, False), # manual compatible
+                   '866DP':channelConfiguration(1, False, False, True, False),
+                   'TTL2':channelConfiguration(2, False, False, False, False),
+                   'TTL3':channelConfiguration(3, False, False, True, True),
+                   'TTL4':channelConfiguration(4, False, False, False, False),
+                   'TTL5':channelConfiguration(5, False, True, False, False),
+                   'TTL6':channelConfiguration(6, False, False, False, False),
+                   'TTL7':channelConfiguration(7, False, False, False, False),
+                   'TTL8':channelConfiguration(8, False, False, False, False),
+                   'TTL9':channelConfiguration(9, False, False, False, False),
+                   'TTL10':channelConfiguration(10, False, False, False, False),
+                   'TTL11':channelConfiguration(11, False, False, False, False),
                    'TTL12':channelConfiguration(12, False, True, False, False),
                    'TTL13':channelConfiguration(13, False, False, False, False),
                    'TTL14':channelConfiguration(14, False, False, False, False),

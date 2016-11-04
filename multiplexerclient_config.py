@@ -11,8 +11,8 @@ class multiplexer_config(object):
     '''
     stretched = False
     displayPID = True
-    info = {'493nm' :(1, '607.426323', (0,1), stretched, displayPID, 1,[-5,5]),
-            '650nm' :(11, '461.311890', (0,2), stretched, displayPID, 2,[-5,5])
+    info = {'493nm' :(1, '607.426050', (0,1), stretched, displayPID, 1,[-5,5]),
+            '650nm' :(11, '461.311710', (0,2), stretched, displayPID, 2,[-5,5])
             }
     '''
     IP address of the wavemeter computer

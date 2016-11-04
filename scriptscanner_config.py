@@ -7,7 +7,8 @@ class config(object):
     exps = 'barium.lib.scripts.experiments.'
 
     # list in the format (import_path, class_name)
-    scripts = [(exps + 'linescan_camera.linescan_camera', 'linescan_camera'), (exps + 'filament_loading.filament_loading', 'filament_loading'),(exps + 'frequency_scan.frequency_scan', 'frequency_scan')]
+    scripts = [(exps + 'linescan_camera.linescan_camera', 'linescan_camera'), (exps + 'filament_loading.filament_loading', 'filament_loading'),(exps + 'frequency_scan.frequency_scan', 'frequency_scan'), \
+               (exps + 'loading_curve.loading_curve', 'loading_curve')]
 
     #allowed_concurrent = {}
     #allowed_concurrent['lasermonitor'] = ['lasermonitor']
