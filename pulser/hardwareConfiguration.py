@@ -8,7 +8,7 @@ class channelConfiguration(object):
         self.manualstate = manualstate
         self.manualinv = manualinversion
         self.autoinv = autoinversion
-        
+
 class ddsConfiguration(object):
     """
     Stores complete configuration of each DDS board
@@ -26,7 +26,7 @@ class ddsConfiguration(object):
         self.boardamplrange = args.get('boardamplrange', (-48.0, 6.0))
         self.boardphaserange = args.get('boardphaserange', (0.0, 360.0))
         self.off_parameters = args.get('off_parameters', (0.0, -48.0))
-        self.phase_coherent_model = args.get('phase_coherent_model', True)        
+        self.phase_coherent_model = args.get('phase_coherent_model', True)
         self.remote = args.get('remote', False)
         self.name = None #will get assigned automatically
 
@@ -36,7 +36,7 @@ class remoteChannel(object):
         self.server = server
         self.reset = args.get('reset', 'reset_dds')
         self.program = args.get('program', 'program_dds')
-        
+
 class hardwareConfiguration(object):
     channelTotal = 32
     timeResolution = '40.0e-9' #seconds
@@ -44,7 +44,7 @@ class hardwareConfiguration(object):
     maxSwitches = 1022
     resetstepDuration = 3 #duration of advanceDDS and resetDDS TTL pulses in units of timesteps
     collectionTimeRange = (0.010, 5.0) #range for normal pmt counting
-    sequenceTimeRange = (0.0, 85.0) #range for duration of pulse sequence    
+    sequenceTimeRange = (0.0, 85.0) #range for duration of pulse sequence
     isProgrammed = False
     sequenceType = None #none for not programmed, can be 'one' or 'infinite'
     collectionMode = 'Normal' #default PMT mode
@@ -52,19 +52,19 @@ class hardwareConfiguration(object):
     okDeviceID = 'Pulser2'
     #okDeviceFile = 'photon_2015_06_10.bit'
     okDeviceFile = 'photon_2015_7_13.bit'
-    lineTriggerLimits = (0, 15000)#values in microseconds 
+    lineTriggerLimits = (0, 15000)#values in microseconds
     secondPMT = False
     DAC = False
-    
+
     #name: (channelNumber, ismanual, manualstate,  manualinversion, autoinversion)
     channelDict = {
            # Internal866 is in pulser firmware, this is the required channel name.
                    'Internal866':channelConfiguration(0, False, False, False, False), ## camera
-                   '866DP':channelConfiguration(1, False, False, True, False), 
+                   '866DP':channelConfiguration(1, False, False, True, False),
                    'TTL2':channelConfiguration(2, False, False, False, False), # manual compatible
                    'TTL3':channelConfiguration(3, False, False, True, True), # manual compatible
                    'TTL4':channelConfiguration(4, False, False, False, False), # manual compatible
-                   'TTL5':channelConfiguration(5, False, True, False, False), # manual compatible
+                   'PMT/Camera':channelConfiguration(5, True, False, False, False), # manual compatible, Use for pmt/camera switch
                    'TTL6':channelConfiguration(6, False, False, False, False), # manual compatible
                    'TTL7':channelConfiguration(7, False, False, False, False), # manual compatible
                    'TTL8':channelConfiguration(8, False, False, False, False), # manual compatible
@@ -82,8 +82,8 @@ class hardwareConfiguration(object):
                    'TTL20':channelConfiguration(20, False, False, False, False), ### triggering for analog board
                    'TTL21':channelConfiguration(21, False, False, False, False), ### triggering for analog board
                    'TTL22':channelConfiguration(22, True, True, False, False),
-                   'TTL23':channelConfiguration(23, True, True, False, False), 
-                   'TTL24':channelConfiguration(24, False, False, False, False), ## for plotting the clock purpose only 
+                   'TTL23':channelConfiguration(23, True, True, False, False),
+                   'TTL24':channelConfiguration(24, False, False, False, False), ## for plotting the clock purpose only
                    'TTL25':channelConfiguration(25, False, False, False, False),
                    'TTL26':channelConfiguration(26, False, True, False, False),
                    'TTL27':channelConfiguration(27, False, False, False, False),
