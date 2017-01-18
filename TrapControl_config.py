@@ -47,5 +47,5 @@ class TrapControl_config(object):
     {Elens : channel}
 
     '''
-    eLens = {'1':4, '2':5}
+    eLens = {'1':6, '2':7}
 
