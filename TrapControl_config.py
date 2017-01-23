@@ -17,7 +17,7 @@ class TrapControl_config(object):
             'HV':(900,850,1400,1400),
             'endCap':(5,5),
             'eLens':(0,0),
-            'Loading Time':(50)
+            'Loading Time':(70)
             }
     '''
     IP address of the computer running the server
