@@ -11,7 +11,7 @@ class multiplexer_config(object):
     '''
     stretched = False
     displayPID = True
-    info = {'493nm' :(1, '607.426010', (0,1), stretched, displayPID, 1,[-5,5]),
+    info = {'493nm' :(1, '607.425990', (0,1), stretched, displayPID, 1,[-5,5]),
             '650nm' :(11, '461.311710', (0,2), stretched, displayPID, 2,[-5,5])
             }
     '''
