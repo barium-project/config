@@ -7,10 +7,16 @@ class config(object):
     exps = 'barium.lib.scripts.experiments.'
 
     # list in the format (import_path, class_name)
-    scripts = [(exps + 'linescan_camera.linescan_camera', 'linescan_camera'), (exps + 'filament_loading.filament_loading', 'filament_loading'),(exps + 'frequency_scan.frequency_scan', 'frequency_scan'), \
-               (exps + 'loading_curve_tof.loading_curve_tof', 'loading_curve_tof'),(exps + 'mass_spec.mass_spec','mass_spec')]
+    scripts = [(exps + 'linescan_camera.linescan_camera', 'linescan_camera'),
+               (exps + 'laser_stability_monitor.laser_stability_monitor', 'laser_stability_monitor'),
+               (exps + 'frequency_scan.frequency_scan', 'frequency_scan'),
+               (exps + 'probe_line_scan.probe_line_scan', 'probe_line_scan'),
+               (exps + 'mass_spec.mass_spec','mass_spec')]
 
-    #allowed_concurrent = {}
-    #allowed_concurrent['lasermonitor'] = ['lasermonitor']
+    # This allows running multiple experiments at the same time. Use the name defined
+    # below the class definition i.e. name = "exp name"
+    allowed_concurrent = {}
+    allowed_concurrent['Laser Monitor'] = ['Laser Monitor', 'Probe Line Scan']
+
 
 launch_history = 1000

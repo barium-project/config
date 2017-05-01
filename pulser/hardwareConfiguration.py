@@ -59,10 +59,10 @@ class hardwareConfiguration(object):
     #name: (channelNumber, ismanual, manualstate,  manualinversion, autoinversion)
     channelDict = {
            # Internal866 is in pulser firmware, this is the required channel name.
-                   'Internal866':channelConfiguration(0, False, False, False, False), ## camera
-                   '866DP':channelConfiguration(1, False, False, True, False),
-                   'TTL2':channelConfiguration(2, False, False, False, False), # manual compatible
-                   'TTL3':channelConfiguration(3, False, False, True, True), # manual compatible
+                   'Internal866':channelConfiguration(0, False, False, False, True), ## camera
+                   '866DP':channelConfiguration(1, False, False, True, False), # 866DP is in pulser firmware, this is the required channel name.
+                   'TTL2':channelConfiguration(2, False, False, False, True), # manual compatible, reserve for 650 Doppler cooling, autoinvert true so default cool
+                   'TTL3':channelConfiguration(3, False, False, False, True), # manual compatible, reserve for 493 Doppler cooling, autoinvert true so default cool
                    'TTL4':channelConfiguration(4, False, False, False, False), # manual compatible
                    'PMT/Camera':channelConfiguration(5, True, False, False, False), # manual compatible, Use for pmt/camera switch
                    'TTL6':channelConfiguration(6, False, False, False, False), # manual compatible
@@ -75,22 +75,22 @@ class hardwareConfiguration(object):
                    'TTL13':channelConfiguration(13, False, False, False, False),
                    'TTL14':channelConfiguration(14, False, False, False, False),
                    'TTL15':channelConfiguration(15, False, False, False, False),
-           'DiffCountTrigger':channelConfiguration(16, False, False, False, False),
+                   'DiffCountTrigger':channelConfiguration(16, False, False, False, False),
+                   'TimeResolvedCount':channelConfiguration(17, False, False, False, False), # needed to activate time tagged photon counting
                    'AdvanceDDS':channelConfiguration(18, False, False, False, False),
                    'ResetDDS':channelConfiguration(19, False, False, False, False),
 
-                   'TTL20':channelConfiguration(20, False, False, False, False), ### triggering for analog board
+                   'ReadoutCount':channelConfiguration(20, False, False, False, False), ### triggering for analog board, needed to count photons without time tagging.
                    'TTL21':channelConfiguration(21, False, False, False, False), ### triggering for analog board
                    'TTL22':channelConfiguration(22, True, True, False, False),
                    'TTL23':channelConfiguration(23, True, True, False, False),
                    'TTL24':channelConfiguration(24, False, False, False, False), ## for plotting the clock purpose only
-                   'TTL25':channelConfiguration(25, False, False, False, False),
-                   'TTL26':channelConfiguration(26, False, True, False, False),
+                   'TTL25':channelConfiguration(25, False, False, False, False), # reserve for weak probe line scan 650
+                   'TTL26':channelConfiguration(26, False, True, False, False), # reserve for weak probe line scan 493
                    'TTL27':channelConfiguration(27, False, False, False, False),
                    'TTL28':channelConfiguration(28, False, False, False, False),
                    'TTL29':channelConfiguration(29, False, False, False, False),
                    'TTL30':channelConfiguration(30, False, False, False, False),
-           # 866DP is in pulser firmware, this is the required channel name.
                    'TTL31':channelConfiguration(31, False, True, False, False),
                 }
     #address, allowedfreqrange, allowedamplrange, frequency, amplitude, **args):
