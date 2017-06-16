@@ -20,7 +20,7 @@ class ddsConfiguration(object):
         self.frequency = frequency
         self.amplitude = amplitude
         self.state = True
-        self.boardfreqrange = args.get('boardfreqrange', (0.0, 2000.0))
+        self.boardfreqrange = args.get('boardfreqrange', (0.0, 2000.0)) # input reference frequency for the DDS
         self.boardramprange = args.get('boardramprange', (0.000113687, 7.4505806))
         self.board_amp_ramp_range = args.get('board_amp_ramp_range', (0.00174623, 22.8896))
         self.boardamplrange = args.get('boardamplrange', (-48.0, 6.0))
@@ -63,7 +63,7 @@ class hardwareConfiguration(object):
                    '866DP':channelConfiguration(1, False, False, True, False), # 866DP is in pulser firmware, this is the required channel name.
                    'TTL2':channelConfiguration(2, False, False, False, True), # manual compatible, reserve for 650 Doppler cooling, autoinvert true so default cool
                    'TTL3':channelConfiguration(3, False, False, False, True), # manual compatible, reserve for 493 Doppler cooling, autoinvert true so default cool
-                   'TTL4':channelConfiguration(4, False, False, False, False), # manual compatible
+                   'TTL4':channelConfiguration(4, False, False, False, False), # manual compatible, use for microwave switch
                    'PMT/Camera':channelConfiguration(5, True, False, False, False), # manual compatible, Use for pmt/camera switch
                    'TTL6':channelConfiguration(6, False, False, False, False), # manual compatible
                    'TTL7':channelConfiguration(7, False, False, False, False), # manual compatible
@@ -95,10 +95,8 @@ class hardwareConfiguration(object):
                 }
     #address, allowedfreqrange, allowedamplrange, frequency, amplitude, **args):
     ddsDict =   {
-                 'repump':ddsConfiguration(    0,  (40.0,400.0),   (-48.0,-5.0),  160.0,   -48.0),
-                '369':ddsConfiguration(    1,  (0.0,800.0),   (-48.0,-3.0),  200.0,   -48.0),
-                'DDS_2':ddsConfiguration(    2,  (0.0,800.0),   (-48.0,3.0),  198.0,   -48.0),
-                'DDS_3':ddsConfiguration(    3,  (0.0,800.0),   (-48.0,3.0),  150.0,   -48.0),
+                 'DDS0':ddsConfiguration(    0,  (40.0,400.0),   (-48.0,6.0),  125.0,   -48.0),
+                 'DDS1':ddsConfiguration(    1,  (40.0,400.0),   (-48.0,6.0),  125.0,   -48.0),
                 }
     remoteChannels = {
 }
