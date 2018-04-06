@@ -11,12 +11,12 @@ class TrapControl_config(object):
     {Ablation loading delay:(time(usec))
     '''
     params = {'Frequency' :(1.099e6, 1.099e6, 1.099e6, 1.099e6),
-            'Phase' :(15,170,0,38),
+            'Phase' :(15,170,0.5,38),
             'Voltage':(186, 1233, 200, 1233),
-            'DC':(0,.1,0,.5),
-            'HV':(900,925,1100,1100),
-            'endCap':(5,5),
-            'eLens':(700,625),
+            'DC':(0,0,0,0),
+            'HV':(900,920,1100,1100),
+            'endCap':(2.2,3.2),
+            'eLens':(700,650),
             'Loading Time':(70)
             }
     '''

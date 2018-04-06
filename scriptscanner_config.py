@@ -7,11 +7,20 @@ class config(object):
     exps = 'barium.lib.scripts.experiments.'
 
     # list in the format (import_path, class_name)
-    scripts = [(exps + 'linescan_camera.linescan_camera', 'linescan_camera'),
-               (exps + 'laser_stability_monitor.laser_stability_monitor', 'laser_stability_monitor'),
-               (exps + 'frequency_scan.frequency_scan', 'frequency_scan'),
-               (exps + 'probe_line_scan.probe_line_scan', 'probe_line_scan'),
-               (exps + 'mass_spec.mass_spec','mass_spec')]
+    scripts = [(exps + 'optical_pumping.optical_pumping', 'optical_pumping'),
+               (exps + 'rabi_flopping.rabi_flopping','rabi_flopping'),
+               (exps + 'microwave_sweep.microwave_sweep','microwave_sweep'),
+               (exps + 'bright_state_detection.bright_state_detection', 'bright_state_detection'),
+               (exps + 'd32_measurement.d32_measurement', 'd32_measurement'),
+               (exps +  'mm_compensation.mm_compensation', 'mm_compensation'),
+               (exps +  'probe_line_scan.probe_line_scan', 'probe_line_scan'),
+               #(exps +  'frequency_sweep.frequency_sweep', 'frequency_sweep'),
+               (exps + 'ramsey.ramsey','ramsey'),
+               (exps + 'frequency_scan.frequency_scan','frequency_scan'),
+               #(exps + 'laser_stability_monitor.laser_stability_monitor','laser_stability_monitor'),
+               (exps + 'shelving.shelving','shelving'),
+               (exps + 'shelving_133.shelving_133','shelving_133')
+               ]
 
     # This allows running multiple experiments at the same time. Use the name defined
     # below the class definition i.e. name = "exp name"

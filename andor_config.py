@@ -14,3 +14,6 @@ class andor_config(object):
     shutter_mode = 'Auto'
 
     image_path = 'H:/Image_Data/'
+    save_in_sub_dir = True
+    save_format = "tsv" # options are tsv, csv, bin
+    save_header = True

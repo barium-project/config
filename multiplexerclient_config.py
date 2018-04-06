@@ -11,13 +11,23 @@ class multiplexer_config(object):
     '''
     stretched = False
     displayPID = True
-    info = {'493nm' :(1, '607.425980', (0,1), stretched, displayPID, 1,[-5,5]),
-            '650nm' :(11, '461.311630', (0,2), stretched, displayPID, 2,[-5,5]),
-            '422nm' :(6, '709.078172', (0,3), stretched, displayPID, 0,[-5,5])
+    info = {'493nm' :(1, '607.426170', (0,1), stretched, displayPID, 1,[-5,5]),
+            '650nm' :(11, '461.311735', (0,2), stretched, displayPID, 2,[-5,5]),
+            '455nm' :(2, '658.116220', (0,3), stretched, displayPID, 0,[-5,5]),
             }
+
     '''
-    IP address of the wavemeter computer
+    info: dict
+    {channel_name: (Multiplexer Channel, hint, display_location (column,row), gain,
+    DAC Channel (0 unassigned)), Rail Volatages, locked, output voltage)}
     '''
-    ip = '10.97.111.8'
+    single_lock = {
+            '455nm' :(2, '658.116220', (0,3), .001,  7,[0,30], 0, 0),
+            '585nm' :(16, '512.141000', (0,3), .001,  6,[0,30], 0, 0),
+                   }
+    '''
+    name of cert for the wavemeter computer
+    '''
+    ip = 'wavemeter'
 
     #ip = '10.97.112.2'
