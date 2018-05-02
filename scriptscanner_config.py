@@ -17,7 +17,7 @@ class config(object):
                #(exps +  'frequency_sweep.frequency_sweep', 'frequency_sweep'),
                (exps + 'ramsey.ramsey','ramsey'),
                (exps + 'frequency_scan.frequency_scan','frequency_scan'),
-               #(exps + 'laser_stability_monitor.laser_stability_monitor','laser_stability_monitor'),
+               (exps + 'laser_stability_monitor.laser_stability_monitor','laser_stability_monitor'),
                (exps + 'shelving.shelving','shelving'),
                (exps + 'shelving_133.shelving_133','shelving_133')
                ]
