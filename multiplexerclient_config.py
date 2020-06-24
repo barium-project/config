@@ -11,10 +11,11 @@ class multiplexer_config(object):
     '''
     stretched = False
     displayPID = True
-    info = {'493nm' :(1, '607.426140', (0,1), stretched, displayPID, 1,[-3,3]),
-            '650nm' :(3, '461.311705', (0,2), stretched, displayPID, 2,[-5,5]),
-            '455nm' :(2, '658.116220', (0,3), stretched, displayPID, 0,[-5,5]),
-            '1171nm' :(11,'256.000000', (0,4), stretched, displayPID, 0,[-5,5]),
+    info = {'493nm' :(1, '607.425700', (0,1), stretched, displayPID, 1,[-7,7]),
+            '650nm' :(15, '461.311365', (0,2), stretched, displayPID, 2,[-5,5]),
+            '585nm' :(7, '512.001400', (0,3), stretched, displayPID, 0,[-5,5]),
+            '455nm' :(2,'658.115671', (0,4), stretched, displayPID, 0,[-5,5]),
+            '614nm' :(5,'487.989370', (0,5), stretched, displayPID, 0,[-5,5]),
             }
 
     '''

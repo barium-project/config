@@ -65,13 +65,13 @@ class hardwareConfiguration(object):
                    'TTL3':channelConfiguration(3, False, False, False, True), # manual compatible, reserve for 493 Doppler cooling, autoinvert true so default cool
                    'TTL4':channelConfiguration(4, False, False, False, False), # manual compatible, use for microwave switch
                    'PMT/Camera':channelConfiguration(5, True, False, False, False), # manual compatible, Use for pmt/camera switch
-                   'TTL6':channelConfiguration(6, False, False, False, False), # manual compatible, Use for protection beam
-                   'TTL7':channelConfiguration(7, False, False, False, False), # manual compatible, Use for 614 LED
-                   'TTL8':channelConfiguration(8, False, False, False, False), # manual compatible, Use for d32 microwaves
-                   'TTL9':channelConfiguration(9, False, False, False, False), # manual compatible
-                   'TTL10':channelConfiguration(10, False, False, False, False), # manual compatible
-                   'TTL11':channelConfiguration(11, False, False, False, False), # manual compatible
-                   'TTL12':channelConfiguration(12, False, False, False, False), # Use for optical pumping
+                   'TTL6':channelConfiguration(6, False, False, False, True), # manual compatible, Use for second microwave switch, inverted logic
+                   'TTL7':channelConfiguration(7, False, False, False, False), # manual compatible, Use for 455 AOM RF Switch
+                   'TTL8':channelConfiguration(8, False, False, False, False), # manual compatible, Use for 614 AOM RF switch
+                   'TTL9':channelConfiguration(9, False, False, False, False), # manual compatible, 614 nm 625 MHz
+                   'TTL10':channelConfiguration(10, False, False, False, True), # manual compatible # 493 rf switch
+                   'TTL11':channelConfiguration(11, False, False, False, False), # manual compatible # use for optical pumping
+                   'TTL12':channelConfiguration(12, False, False, False, False),  #BABD Channel
                    'TTL13':channelConfiguration(13, False, False, False, False),
                    'TTL14':channelConfiguration(14, False, False, False, False),
                    'TTL15':channelConfiguration(15, False, False, False, False),
@@ -86,8 +86,8 @@ class hardwareConfiguration(object):
                    'TTL23':channelConfiguration(23, True, True, False, False),
                    'TTL24':channelConfiguration(24, False, False, False, False), ## for plotting the clock purpose only
                    'TTL25':channelConfiguration(25, False, False, False, False), # reserve for weak probe line scan 650
-                   'TTL26':channelConfiguration(26, False, True, False, False), # reserve for weak probe line scan 493
-                   'TTL27':channelConfiguration(27, False, False, False, False),
+                   'TTL26':channelConfiguration(26, False, False, False, False),
+                   'TTL27':channelConfiguration(27, False, False, False, False), #614
                    'TTL28':channelConfiguration(28, False, False, False, False),
                    'TTL29':channelConfiguration(29, False, False, False, False),
                    'TTL30':channelConfiguration(30, False, False, False, False),
@@ -95,11 +95,13 @@ class hardwareConfiguration(object):
                 }
     #address, allowedfreqrange, allowedamplrange, frequency, amplitude, **args):
     ddsDict =   {
-                 '493nm':ddsConfiguration(    0,  (40.0,400.0),   (-48.0,-10.0),  125.0,   -48.0),
-                 '585nm':ddsConfiguration(    1,  (40.0,400.0),   (-48.0,6.0),  250.0,   -48.0),
-                 'LF DDS':ddsConfiguration(    2,  (.001,1000.0),   (-48.0,6.0),  337.0,   -48.0),
-                 '455nm':ddsConfiguration(    3,  (1,1000.0),   (-48.0,6.0),  320,   -48.0),
-                 '650nm':ddsConfiguration(    4,  (1,1000.0),   (-48.0,6.0),  125.0,   -48.0),
+                 '493nm':ddsConfiguration(    0,  (40.0,400.0),   (-48.0,6.0),  125.0,   -48.0),
+                 'Microwaves':ddsConfiguration(1,  (1,1000.0),   (-48.0,-1.0), 375.0,   -48.0),
+                 'LF DDS':ddsConfiguration(    2,  (.001,1000.0),   (-48.0,-2.0),  26.286,   -5.0),
+                 '614nm':ddsConfiguration(    3,  (1,1000.0),   (-48.0,2.0),  320,   -48.0),
+                 '650nm':ddsConfiguration(    4,  (1,1000.0),   (-48.0,6.0),  125.0,   1.0),
+                 '780_1nm':ddsConfiguration(10,  (1,1000.0),   (-48.0,-16.0),  80.0,   -48.0),
+                 '1762nm':ddsConfiguration(12,  (1,1000.0),   (-48.0,-8.0),  250.0,   -48.0),
                 }
     remoteChannels = {
 }

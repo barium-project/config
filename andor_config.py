@@ -10,10 +10,10 @@ class andor_config(object):
     acquisition_mode = 'Single Scan'
     trigger_mode = 'Internal'
     exposure_time = 0.200 #seconds
-    binning = [2, 2] #numbers of pixels for horizontal and vertical binning
+    binning = [1, 1] #numbers of pixels for horizontal and vertical binning
     shutter_mode = 'Auto'
 
     image_path = 'H:/Image_Data/'
     save_in_sub_dir = True
-    save_format = "tsv" # options are tsv, csv, bin
-    save_header = True
+    save_format = "csv" # options are tsv, csv, bin
+    save_header = False
