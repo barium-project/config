@@ -20,6 +20,7 @@ class config(object):
                (exps + 'laser_stability_monitor.laser_stability_monitor','laser_stability_monitor'),
                (exps + 'shelving.shelving','shelving'),
                (exps + 'metastable_rabi_flopping.metastable_rabi_flopping','metastable_rabi_flopping'),
+               (exps + 'e2_laser_sweep.e2_laser_sweep','e2_laser_sweep'),
                ]
 
     # This allows running multiple experiments at the same time. Use the name defined

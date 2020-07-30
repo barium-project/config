@@ -65,10 +65,10 @@ class hardwareConfiguration(object):
                    'TTL3':channelConfiguration(3, False, False, False, True), # manual compatible, reserve for 493 Doppler cooling, autoinvert true so default cool
                    'TTL4':channelConfiguration(4, False, False, False, False), # manual compatible, use for microwave switch
                    'PMT/Camera':channelConfiguration(5, True, False, False, False), # manual compatible, Use for pmt/camera switch
-                   'TTL6':channelConfiguration(6, False, False, False, True), # manual compatible, Use for second microwave switch, inverted logic
+                   'TTL6':channelConfiguration(6, False, False, False, True), # manual compatible, 
                    'TTL7':channelConfiguration(7, False, False, False, False), # manual compatible, Use for 455 AOM RF Switch
                    'TTL8':channelConfiguration(8, False, False, False, False), # manual compatible, Use for 614 AOM RF switch
-                   'TTL9':channelConfiguration(9, False, False, False, False), # manual compatible, 614 nm 625 MHz
+                   'TTL9':channelConfiguration(9, False, False, False, False), # manual compatible, 1762 EOM
                    'TTL10':channelConfiguration(10, False, False, False, True), # manual compatible # 493 rf switch
                    'TTL11':channelConfiguration(11, False, False, False, False), # manual compatible # use for optical pumping
                    'TTL12':channelConfiguration(12, False, False, False, False),  #BABD Channel
@@ -87,7 +87,7 @@ class hardwareConfiguration(object):
                    'TTL24':channelConfiguration(24, False, False, False, False), ## for plotting the clock purpose only
                    'TTL25':channelConfiguration(25, False, False, False, False), # reserve for weak probe line scan 650
                    'TTL26':channelConfiguration(26, False, False, False, False),
-                   'TTL27':channelConfiguration(27, False, False, False, False), #614
+                   'TTL27':channelConfiguration(27, False, False, False, False), 
                    'TTL28':channelConfiguration(28, False, False, False, False),
                    'TTL29':channelConfiguration(29, False, False, False, False),
                    'TTL30':channelConfiguration(30, False, False, False, False),
