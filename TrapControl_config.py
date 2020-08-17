@@ -24,6 +24,8 @@ class TrapControl_config(object):
     '''
     ip = '10.97.111.2'
 
+    dc_ip = '10.97.111.1'
+
     ''' Mapping of rods to channels
 
     rods: dict
