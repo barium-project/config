@@ -13,7 +13,7 @@ class config(object):
                (exps + 'bright_state_detection.bright_state_detection', 'bright_state_detection'),
                (exps + 'high_fidelity.high_fidelity', 'high_fidelity'),
                #(exps +  'mm_compensation.mm_compensation', 'mm_compensation'),
-               #(exps +  'probe_line_scan.probe_line_scan', 'probe_line_scan'),
+               (exps +  'probe_line_scan.probe_line_scan', 'probe_line_scan'),
                #(exps +  'DDS_test.DDS_test_channels', 'DDS_test_channels'),
                (exps + 'ramsey.ramsey','ramsey'),
                (exps + 'frequency_scan.frequency_scan','frequency_scan'),
@@ -21,6 +21,7 @@ class config(object):
                (exps + 'shelving.shelving','shelving'),
                (exps + 'metastable_rabi_flopping.metastable_rabi_flopping','metastable_rabi_flopping'),
                (exps + 'e2_laser_sweep.e2_laser_sweep','e2_laser_sweep'),
+               (exps + 'tickle_sweep.tickle_sweep','tickle_sweep'),
                ]
 
     # This allows running multiple experiments at the same time. Use the name defined

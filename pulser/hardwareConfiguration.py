@@ -98,7 +98,7 @@ class hardwareConfiguration(object):
                  '493nm':ddsConfiguration(    0,  (40.0,400.0),   (-48.0,6.0),  125.0,   -48.0),
                  'Microwaves':ddsConfiguration(1,  (1,1000.0),   (-48.0,-1.0), 375.0,   -48.0),
                  'LF DDS':ddsConfiguration(    2,  (.001,1000.0),   (-48.0,-2.0),  26.286,   -5.0),
-                 '614nm':ddsConfiguration(    3,  (1,1000.0),   (-48.0,2.0),  320,   -48.0),
+                 '614nm':ddsConfiguration(    3,  (1,1000.0),   (-48.0,2.0),  320,   -1.0),
                  '650nm':ddsConfiguration(    4,  (1,1000.0),   (-48.0,6.0),  125.0,   1.0),
                  '780_1nm':ddsConfiguration(10,  (1,1000.0),   (-48.0,-16.0),  80.0,   -48.0),
                  '1762nm':ddsConfiguration(12,  (1,1000.0),   (-48.0,-8.0),  250.0,   -48.0),

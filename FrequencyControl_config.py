@@ -3,7 +3,7 @@ class FrequencyControl_config(object):
     '''
     IP address of the computer running the server
     '''
-    ip = 'bender'
+    ip = 'flexo'
 
     ''' List the GPIB addresses for the client HP8672A and HP8672B to connect to
     '''

@@ -22,7 +22,13 @@ class TrapControl_config(object):
     '''
     IP address of the computer running the server
     '''
-    ip = '10.97.111.2'
+    ip = '10.97.111.3'
+    
+    '''
+    IP address of the computer running the piezo controller for DC
+    '''
+    #dc_ip = '10.97.111.1'
+    dc_ip = 'planetexpress'
 
     ''' Mapping of rods to channels
 
@@ -32,6 +38,7 @@ class TrapControl_config(object):
     '''
 
     rods = {'1':3, '2':1, '3':2, '4':0}
+    dc_rods = {'1':3, '2':1, '3':2, '4':4}
 
     ''' Mapping of end caps to channels
 
